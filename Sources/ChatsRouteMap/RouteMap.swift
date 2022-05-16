@@ -8,6 +8,7 @@
 
 import Foundation
 import Module
+import ModelInterfaces
 
 public protocol ChatsModuleInput: AnyObject { }
 
@@ -17,5 +18,5 @@ public typealias ChatsModule = Module<ChatsModuleInput, ChatsModuleOutput>
 
 public protocol ChatsRouteMap: AnyObject {
     func chatsAndRequestsModule() -> ChatsModule
-    func messangerModule() -> ChatsModule
+    func messangerModule(with model: MessangerChatModelProtocol) -> ChatsModule
 }
