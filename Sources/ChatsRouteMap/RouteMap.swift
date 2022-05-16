@@ -16,5 +16,6 @@ public protocol ChatsModuleOutput: AnyObject { }
 public typealias ChatsModule = Module<ChatsModuleInput, ChatsModuleOutput>
 
 public protocol ChatsRouteMap: AnyObject {
-    func rootModule() -> ChatsModule
+    func chatsAndRequestsModule() -> ChatsModule
+    func messangerModule() -> ChatsModule
 }
